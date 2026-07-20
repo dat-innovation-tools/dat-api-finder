@@ -36,7 +36,7 @@
     "labelRestEndpoint": "API-Endpunkt (REST)",
     "labelYourProduct": "Ihr Produkt",
     "labelDocumentation": "Dokumentation",
-    "openDocumentation": "Zur API-Dokumentation",
+    "openDocumentation": "API-Dokumentation öffnen",
     "productQuestion": "Welches SilverDAT-Produkt nutzen Sie aktuell?",
     "productHintPrimary": "Diese Funktion gibt es in mehreren unserer Produkte. Für die meisten Fälle passt SilverDAT 3.",
     "productHintOther": "Diese Funktion gibt es in mehreren unserer Produkte. Wählen Sie Ihres.",

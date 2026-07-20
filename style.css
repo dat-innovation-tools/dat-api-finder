@@ -509,6 +509,14 @@ button#nextBtn:disabled::before {
     text-decoration: underline;
 }
 
+.footer-version {
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #e2e8f0;
+    font-size: 0.78rem;
+    color: #a0aec0;
+}
+
 .result-help {
     margin-top: 8px;
     padding: 20px 24px;

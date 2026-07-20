@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         backBtn.textContent = ui.back;
         copyBtn.textContent = ui.copyResult;
         document.getElementById('footerSupportLabel').textContent = ui.footerSupport;
+        document.getElementById('footerSupportLink').textContent = ui.helpSupportLink;
         progressSteps.forEach((el, i) => {
             const labelEl = el.querySelector('.step-label');
             const labels = [ui.stepCategory, ui.stepFunction, ui.stepResult];
@@ -667,7 +668,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
                 <div class="result-doc-row">
                     <i class="fas fa-book"></i>
-                    <a href="${result.kompendium_link || result.api_docs || DOCS_FALLBACK_LINK}" target="_blank">${ui.openDocumentation}</a>
+                    <a href="${(result.contextKompendiumLinks && result.contextKompendiumLinks[defaultContext]) || result.kompendium_link || result.api_docs || DOCS_FALLBACK_LINK}" target="_blank">${ui.openDocumentation}</a>
                 </div>
         `;
         html += renderResultHelp();

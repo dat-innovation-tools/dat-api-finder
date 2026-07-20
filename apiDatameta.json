@@ -353,6 +353,10 @@
         "contextFuncs": {
           "FinanceLine": "getVehicleEvaluation()",
           "myClaim": "createValuationN() / changeValuation(N)"
+        },
+        "contextKompendiumLinks": {
+          "FinanceLine": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2172/10/11",
+          "myClaim": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/15178/10/11"
         }
       },
       "targetDateValuation": {

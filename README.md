@@ -18,6 +18,7 @@ WICHTIG: `data.js` muss nach jeder Änderung an apiDatameta.json/de.json/en.json
 - WSDL-Host wird für GOLD automatisch von `www.datgroup.com` auf `gold.datgroup.com` umgeschrieben (siehe `applyEnvironmentHost()` in script.js)
 
 ## Stand
-Siehe Git-Log für den Änderungsverlauf. Letzter besprochener Stand: DAT API Finder v2,
+Siehe Git-Log für den Änderungsverlauf. Aktueller Stand: DAT API Finder v2.1.0,
 inkl. fachlicher Korrekturen (equipment/vehicleIdentification/vehicleSelection),
-neuer Identifikationsfunktionen, UX-Fixes, CI-Farben, GOLD/PROD-Linkkorrektur.
+neuer Identifikationsfunktionen, UX-Fixes, CI-Farben, GOLD/PROD-Linkkorrektur,
+Textkorrektur Doku-Link und strukturiertem Support-Formular-Link im Footer.
