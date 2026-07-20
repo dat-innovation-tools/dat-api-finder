@@ -1,0 +1,398 @@
+{
+  "ui": {
+    "pageTitle": "DAT API Finder",
+    "pageSubtitle": "Quickly and easily find the right API for your use case.",
+    "searchLabel": "Direct search",
+    "searchPlaceholder": "Function, service, or keyword …",
+    "searchHint": "e.g. \"VIN\", \"calculateN\", \"Token\", or \"myClaim\"",
+    "searchNoResults": "No results — try \"VIN\", \"Token\", or a service name.",
+    "stepCategory": "Category",
+    "stepFunction": "Function",
+    "stepResult": "Result",
+    "step1Group": "What would you like to do?",
+    "step1Category": "What exactly are you looking for?",
+    "step2": "Which function do you need?",
+    "stepResultTitle": "Your result",
+    "backAllAreas": "All areas",
+    "back": "Back",
+    "next": "Next",
+    "restart": "Start over",
+    "copyResult": "Copy result",
+    "copied": "Copied!",
+    "footerSupport": "Interface support:",
+    "navHintGroup": "Please select an area first.",
+    "navHintCategory": "Please select a category first.",
+    "navHintFunction": "Please select a function first.",
+    "showAllFuncs": "Show all {n} functions",
+    "showLessFuncs": "Show less",
+    "copy": "Copy",
+    "copiedShort": "Copied",
+    "open": "Open",
+    "openWsdl": "Open WSDL",
+    "sectionApiFunction": "API function",
+    "sectionProductWsdl": "Product & WSDL",
+    "sectionFurther": "Further information",
+    "labelRelevantFuncs": "Relevant API function(s)",
+    "labelRestEndpoint": "API endpoint (REST)",
+    "labelYourProduct": "Your product",
+    "labelDocumentation": "Documentation",
+    "openDocumentation": "Open API documentation",
+    "productQuestion": "Which SilverDAT product do you currently use?",
+    "productHintPrimary": "This function is available in several of our products. For most cases, SilverDAT 3 is a good fit.",
+    "productHintOther": "This function is available in several of our products. Select yours.",
+    "otherProduct": "Select another product …",
+    "variantHint": "For calculateExpert, use productVariant={variant} as a parameter.",
+    "invalidSelection": "Invalid selection. Please start over.",
+    "helpSupportTitle": "Questions or issues with API integration?",
+    "helpSupportText": "Interface partners with integration issues or further questions — even after the workshop — should contact our first-level support:",
+    "helpWorkshopTitle": "Interface workshop",
+    "helpWorkshopText": "As an interface partner, you participate in our workshop before going live with your integration.",
+    "helpWorkshopLink": "Request workshop",
+    "noWsdl": "No WSDL (REST service)",
+    "funcLockNote": "Showing only products with {func}.",
+    "funcLockReset": "Show all products",
+    "tableProduct": "Product",
+    "tableFunction": "API function(s)",
+    "tableEndpoint": "Endpoint",
+    "showMoreProducts": "Show more products ({n})",
+    "helpSupportLink": "Go to support request"
+  },
+  "groups": {
+    "auth": {
+      "label": "Authentication",
+      "hint": "Required first: JWT token for every API call"
+    },
+    "vehicle": {
+      "label": "Find & identify vehicle",
+      "hint": "Selection, identification, images, equipment"
+    },
+    "evaluate": {
+      "label": "Evaluate & forecast",
+      "hint": "Valuation, residual value, appraisers"
+    },
+    "calculate": {
+      "label": "Calculate & cases",
+      "hint": "Repair calculation, myClaim"
+    },
+    "tools": {
+      "label": "Tools & master data",
+      "hint": "Conversion, construction time & master data"
+    }
+  },
+  "categoryHints": {
+    "auth": "JWT token for API access",
+    "vehicleSelection": "Determine DAT €uropa-Code®",
+    "vehicleIdentification": "VIN, KBA, license plate & more",
+    "conversionFunctions": "Convert construction period & equipment",
+    "vehicleImagery": "Vehicle & rim images",
+    "evaluate": "Valuation, forecast & residual value",
+    "calculation": "Calculate damage (calculatePro/Expert)",
+    "myclaim": "Cases, partners, attachments",
+    "masterdata": "Dropdowns & master data",
+    "equipment": "Determine equipment"
+  },
+  "products": {
+    "myClaim": {
+      "label": "SilverDAT 3 PRO (cases, calculation & valuation)"
+    },
+    "VehicleRepairOnline": {
+      "label": "SilverDAT calculatePro / calculateExpert (calculation)"
+    },
+    "DATECodeSelection": {
+      "label": "DAT €uropa-Code® vehicle selection"
+    },
+    "FinanceLine": {
+      "label": "SilverDAT 3 valuateFinance (valuation & forecast)"
+    },
+    "valuateNG": {
+      "label": "SilverDAT 3 valuateExpert (appraisers)"
+    },
+    "MyClaimExternal": {
+      "label": "SilverDAT 3 PRO – external case interface"
+    },
+    "GlassRep": {
+      "label": "SilverDAT calculateGlass (auto glass)"
+    },
+    "Mietwagenspiegel": {
+      "label": "SilverDAT Mietwagenspiegel"
+    }
+  },
+  "apiText": {
+    "auth": {
+      "label": "Authentication",
+      "description": "Generate a DAT AuthorizationToken to access various web services.\n\nThe token is a secure JWT required for all API calls and is typically valid for 30 minutes.",
+      "options": {
+        "generateToken": {
+          "text": "Request secure token",
+          "description": "Generates a secure JWT required for all subsequent API calls.\n\n<i class=\"fas fa-clock\" style=\"color:#4F7399; margin-right:6px;\"></i>This token is valid for only 30 minutes and ensures secure authentication.\n\n<strong>Important:</strong> Always use the Authentication service of the same product whose web service function you intend to call next — the token is product-specific."
+        }
+      }
+    },
+    "vehicleSelection": {
+      "label": "Vehicle selection",
+      "description": "Select a vehicle step by step to determine the DAT €uropa-Code®.\n\nSupports classic and interactive approaches as well as retrieval of technical data.\n\nMulti-country and multi-language support for countries such as DE, AT, CH, IT, FR, ES, NL, HU, PL, CZ, BG, RO, GR, TR, CN.",
+      "options": {
+        "classicTree": {
+          "text": "Classic search tree",
+          "description": "Step-by-step selection via approximately 19 functions (e.g. vehicle type, manufacturer, base models, subtypes, engine options, transmission, etc.) to compile the DAT €Europa-Code®.\n\nIdeal for structured, hierarchical searches.\nExample: getVehicleTypes → getManufacturers → getBaseModelsN → getSubModels → getClassificationGroups → getEngineOptions → getGearingOptions → getCarBodyOptions → compileDatECode.\nAdditionally for vehicle valuation: getPriceFocusCases → getConstructionPeriodsN → getPriceFocusConstructionYears. For certain vehicle types, additionally getWheelbaseOptions."
+        },
+        "interactiveSelection": {
+          "text": "Interactive vehicle selection",
+          "description": "An interactive, guided search that dynamically adjusts options (e.g. based on the selected vehicle attributes).\n\nOnly for valuable vehicles, available as REST only.\nCall executeVehicleSelectionInteractive multiple times. With each call, results are further filtered; from 20 or fewer matches, specific vehicles are available for selection."
+        },
+        "vehicleData": {
+          "text": "Retrieve vehicle data",
+          "description": "Retrieve detailed technical data (e.g. consumption, dimensions, performance) for a DAT €uropa-Code®. Includes multi-country & multi-language support.\n\nImportant: Only the standard equipment of the vehicle is considered. WLTP consumption figures are min./max. values across all possible equipment variants of a model."
+        },
+        "classificationGroups": {
+          "text": "Classifying equipment",
+          "description": "In the subtype variant, positions 12–15 of the DAT €Europa-Code®, the classifying equipment of a vehicle (e.g. engine, body style, transmission, wheelbase) is encoded. The number of classifying equipment items ranges from 2 to 8, depending on the vehicle type.\n\nNote: Determining the equipment actually installed or theoretically available, as well as mapping manufacturer codes to DAT equipment, is covered under \"Vehicle equipment\" → \"Determine equipment\" (ConversionFunctionsService)."
+        }
+      }
+    },
+    "vehicleIdentification": {
+      "label": "Vehicle identification",
+      "description": "Identify a vehicle based on key data such as DAT €uropa-Code®, vehicle identification number (VIN), KBA key (DE), national code (AT), license plate (CH), registration number (CH), type approval (CH), or type code.",
+      "options": {
+        "vin": {
+          "text": "By VIN",
+          "description": "Unique identification via the 17-digit vehicle identification number (VIN).\n\nReturns DAT €uropa-Code®, standard and special equipment, color and upholstery information, and more.\nThere are two procedures: VIN-Query and VIN-Basic as a fallback when manufacturer data retrieval/processing fails; IdentificationSource indicates the procedure used; VinAccuracy provides information on match accuracy; VINResult contains the data from the data card.\nFree test stubs with vehicle data are available for error stubs with fault scenarios; reimport vehicles are flagged where the manufacturer provides destination country information."
+        },
+        "ecode": {
+          "text": "By DAT €uropa-Code®",
+          "description": "Fast identification via the 15-digit DAT €uropa-Code®.\n\nReturns information on standard equipment and available (orderable) special equipment."
+        },
+        "kba": {
+          "text": "By KBA (HSN/TSN)",
+          "description": "Identification of German vehicles via the KBA key (manufacturer key/type key).\n\nAvailable for Germany only.\nThe KBA key usually defines the vehicle only down to the subtype level.\nImportant: The relationship between KBA key and DAT €uropa Code is an m:n relationship."
+        },
+        "natcodeAustria": {
+          "text": "By national code (Austria)",
+          "description": "Identification for Austrian vehicles via the national code.\n\nAvailable for Austria only."
+        },
+        "codeSwitzerland": {
+          "text": "By code (Switzerland)",
+          "description": "Identification for Swiss vehicles via license plate, registration number, or type approval.\n\nAvailable for Switzerland only."
+        },
+        "licencePlate": {
+          "text": "By license plate (IT/FR/NL/ES)",
+          "description": "License plate lookup for specific countries (returns VIN only).\n\ngetVinByLicencePlateFrance/Italy/Netherlands/Spain; available per country only."
+        },
+        "equipmentLogic": {
+          "text": "Equipment logic",
+          "description": "Equipment is always displayed filtered through our equipment logic. There is a view of equipment for vehicle valuation (default) and a view for damage calculation. If needed, for example after a VIN lookup, the equipment view can be switched via getVehicleTranslation."
+        },
+        "typecode": {
+          "text": "By type code",
+          "description": "Identifies a vehicle via a product-specific type code."
+        },
+        "supportedVinWmi": {
+          "text": "Retrieve supported VIN manufacturers (WMI)",
+          "description": "Returns the list of World Manufacturer Identifiers (WMI, first 3 characters of the VIN) for which a VIN lookup is supported — useful to check upfront whether a manufacturer/VIN can be queried at all."
+        },
+        "vinByOcr": {
+          "text": "VIN via image recognition (OCR)",
+          "description": "Determines the vehicle identification number (VIN) from an image, e.g. a photo of the VIN plate, using optical character recognition (OCR)."
+        },
+        "orderMarkedVin": {
+          "text": "Mark VIN for tracking",
+          "description": "Marks a VIN for targeted follow-up within the manufacturer VIN procedure."
+        }
+      }
+    },
+    "conversionFunctions": {
+      "label": "Conversion and utility functions",
+      "description": "Utility functions for converting DAT construction period values to dates and vice versa, determining available equipment groups, and outputting classifying equipment based on DAT €uropa-Code® + market index.",
+      "options": {
+        "dateConversion": {
+          "text": "Construction period to date",
+          "description": "Converts DAT construction period/ConstructionTime (1–9999) to a date or vice versa.\n\nInfo: In the VIN lookup result, construction period 9999 = unknown."
+        },
+        "equipmentConversion": {
+          "text": "Equipment groups and classifying equipment",
+          "description": "The function getEquipmentGroups returns the available equipment groups, and valueCode2Description returns the classifying equipment of a DAT €uropa-Code® with market index."
+        }
+      }
+    },
+    "vehicleImagery": {
+      "label": "Vehicle images",
+      "description": "Retrieval of vehicle images and rim graphics.\n\nVehicle images up to 7 views (front, front angle, sides, rear, interior, trunk); available in UI & interface.\nNote: Observe license terms!",
+      "options": {
+        "vehicleImages": {
+          "text": "Retrieve vehicle images",
+          "description": "Returns sample images per DAT €uropa-Code® (e.g. front view, interior)."
+        },
+        "rimImages": {
+          "text": "Rim graphics",
+          "description": "Specific images for rims."
+        }
+      }
+    },
+    "evaluate": {
+      "label": "Vehicle valuation & forecast",
+      "description": "Perform precise valuations (standard, reference date, approximate), create residual value forecasts, or use special services such as free file number and rental car mirror.\n\nBased on DAT standards for valuateFinance, valuateExpert, and SilverDAT 3 PRO.",
+      "options": {
+        "standardValuation": {
+          "text": "Standard valuation",
+          "description": "Valuation of a vehicle at the current point in time based on age, mileage, equipment, and condition.\n\nOutputs sales price, trade margin, and purchase price.\nFor vehicles up to 20 years old."
+        },
+        "targetDateValuation": {
+          "text": "Reference date valuation",
+          "description": "Valuation at a fixed reference date (past or current month).\n\nRemains static and takes historical data into account.\nChargeable for backdated queries >1 month."
+        },
+        "approximateValuation": {
+          "text": "Approximate valuation",
+          "description": "Imprecise valuation without exact identification (e.g. by model/KBA).\n\nIgnores condition and equipment; result less reliable than standard valuation."
+        },
+        "residualValueForecast": {
+          "text": "Residual value forecast (new/used)",
+          "description": "Forecast of residual value for 6–72 months from first registration (passenger cars, SUVs, vans).\n\nBased on mileage and standard taxation rules."
+        },
+        "freeFileNumber": {
+          "text": "Free file number",
+          "description": "Valuation for non-valuable vehicles (e.g. >20 years old, exotics).\n\nBased on user-defined inputs such as list new price and guideline value."
+        },
+        "rentalMirror": {
+          "text": "Rental car mirror",
+          "description": "Determination of regional rental car costs, classes, and loss-of-use compensation (by VIN, DAT code, or postal code).\n\nExcludes special offers."
+        },
+        "processManagement": {
+          "text": "Case management",
+          "description": "Create, modify, search, delete, and export valuation cases (dossiers/valuations).\n\nIncludes reset to DAT standards and value factors.\n\nNote: The value-influencing factors (setValueInfluencingFactors / getValueInfluencingFactors) are not available in valuateFinance."
+        },
+        "tradingProcess": {
+          "text": "Sales process",
+          "description": "Manage purchase and sales offers, access, and status in SilverDAT 3 PRO.\n\nIncludes groups, business types, and details."
+        },
+        "expertService": {
+          "text": "Appraiser features",
+          "description": "Extended functions for valuateExpert: value definitions, orders, condition data, schemas, special findings, and image links."
+        },
+        "batchValuation": {
+          "text": "Bulk/batch valuation",
+          "description": "Automated revaluation or follow-up valuation of multiple vehicles in valuateFinance and SilverDAT 3 PRO."
+        },
+        "webScan": {
+          "text": "webScan (market overview)",
+          "description": "Market data overview for an existing case or a uniquely identified vehicle.\n\nREST service. The path differs per product: SilverDAT 3 PRO uses /myClaim/rest/marketData/, valuateFinance /FinanceLine/rest/v1/marketData/."
+        },
+        "vehicleProperties": {
+          "text": "Vehicle description",
+          "description": "Set and retrieve colour and upholstery data for a valuation case.\n\nThe service name differs per product: VehicleUserPropertiesService (valuateExpert) and ValuationVehiclePropertiesService (SilverDAT 3 PRO)."
+        },
+        "inMemoryValuation": {
+          "text": "Valuation without a case",
+          "description": "Runs a valuation directly in memory without creating a valuation case.\n\nUseful for quick price lookups where no dossier should be stored."
+        }
+      }
+    },
+    "calculation": {
+      "label": "Repair calculation",
+      "description": "Capture and calculate accident damage, glass damage, and related costs and discounts based on original manufacturer data.\n\nSupports SilverDAT calculatePro and calculateExpert for workshops and appraisers.\ncalculateN() for new calculation, calculateContract() for cases; export via exportDossierToDocument().\nVariants: productVariant=calculateExpert for appraisal functions such as diminished value.",
+      "options": {
+        "newCalc": {
+          "text": "Start new calculation",
+          "description": "Calculate a vehicle without saving or start a new case.\n\nIdeal for quick damage assessments.\n- calculateN() creates a calculation without saving it.\n- importDossier() creates/updates/overwrites a calculation.\n- createOrUpdateContractN() may also be used here."
+        },
+        "contractCalc": {
+          "text": "Calculate (re-calculate) case",
+          "description": "Perform a re-calculation of an existing case.\n\nSupports SilverDAT calculateExpert for appraisal functions (e.g. commercial diminished value).\ncalculateContract(); productVariant=calculateExpert."
+        },
+        "resultsRetrieve": {
+          "text": "Retrieve results",
+          "description": "Retrieve detailed calculation results, case details, or overviews.\n\nImportant: getCalculationResultN() can only retrieve calculated cases."
+        },
+        "exportDoc": {
+          "text": "Export documents",
+          "description": "Export calculation documents (PDF/reports)."
+        },
+        "manageContract": {
+          "text": "Manage cases",
+          "description": "Create, update, delete, or manage case status.\n\nIncludes lock info and price generations.\ncreateOrUpdateContractN() (new); getContractStatus(); deleteDossier()."
+        },
+        "partsDetails": {
+          "text": "Spare parts & equipment",
+          "description": "Retrieve details on spare parts, fill quantities, or installation conditions.\n\n- getSparePartsDetailsForDPN\n- getSparePartsDetailsForDPNByVIN\n- getSparePartsDetailsByVIN\nSpare part details can also be retrieved via these functions."
+        },
+        "manualPositions": {
+          "text": "Manual line items",
+          "description": "Import, export, or delete manual line items for custom adjustments in the calculation."
+        }
+      }
+    },
+    "myclaim": {
+      "label": "myClaim web services",
+      "description": "Manage collaborative processes in myClaim, including case management, partner assignment, attachment handling, communication, and status changes for workshops, insurers, and manufacturer networks.\n\nBased on MyClaimExternalService for SilverDAT myClaim.\ncreateOrUpdateContractN(); findContract(); getPrintReport().",
+      "options": {
+        "findContract": {
+          "text": "Find case by reference",
+          "description": "The findContract method allows you to retrieve the case ID (contractId) of a case using the case name (referenceNumber) for quick access."
+        },
+        "getContract": {
+          "text": "Retrieve single case",
+          "description": "The getContract method allows you to retrieve a case using the provided case ID (contractId), including detailed information such as Vehicle, TradingData, RepairCalculation, and participatingPartners."
+        },
+        "listContracts": {
+          "text": "List cases",
+          "description": "The listContracts method retrieves a list of cases using the case type (contractTypes) and network type (networkTypes), optionally filtered by attributes such as VIN, HSN/TSN, or tags."
+        },
+        "createOrUpdateContractN": {
+          "text": "Create/update case",
+          "description": "The createOrUpdateContractN function is used to create a new case or update an existing one, with required fields such as Claim type, Network type, Country code, Language, and Currency.\n\nSupports templates and custom fields for network customization.\ncreateOrUpdateContractN() with optional 'mode' parameter."
+        },
+        "deleteContract": {
+          "text": "Delete case",
+          "description": "deleteContract allows cases to be removed from the system safely and efficiently, specifying a deletion reason such as CUSTOMER_REQUEST, OTHER, or PROCEDURE_CLEANING to maintain data integrity."
+        },
+        "listTemplates": {
+          "text": "Retrieve templates",
+          "description": "The listTemplates function retrieves all work templates (templates) of a network, important when multiple templates exist to transfer data into the desired template.\n\nSupports types such as vro_calculation for damage calculations.\ngetTemplates()."
+        },
+        "manageInvoiceRates": {
+          "text": "Manage billing rates",
+          "description": "listInvoiceRates lists billing rates (e.g. LabourCostFactor, EuroLacquerFactor) within a customer number.\n\nassignInvoiceRateToContract assigns a rate to a case for precise billing after case creation.\ngetContractPriceGenerations() / setContractPriceGenerations()."
+        },
+        "manageAttachments": {
+          "text": "Manage attachments",
+          "description": "listAttachmentsOfContract lists attachments (e.g. invoices, images) in folders of a case.\n\nuploadAttachmentByFolderID enables uploading; getPrintReport downloads calculation PDFs for efficient document management.\nmanageAttachments() for upload/delete."
+        },
+        "importCalculation": {
+          "text": "Import calculations",
+          "description": "importCalculationSummaryByType transfers calculation line items from third-party systems as a pseudo-calculation into myClaim, useful for comparisons and integration of external data."
+        },
+        "managePartners": {
+          "text": "Assign/remove partners",
+          "description": "assignPartnerByCustomerNumber assigns a partner to a case (by customer number and role, e.g. EXPERT).\n\nunAssignPartnerFromContract removes assignments to dynamically manage collaborative roles.\ngetInsurances() for country-specific insurers."
+        },
+        "manageMessages": {
+          "text": "Exchange messages",
+          "description": "addMessage sends messages between partners (e.g. rejection reasons).\n\nlistContractHistory retrieves history entries such as chat logs for transparent communication.\ngetLockedInfo() for edit status."
+        },
+        "changeStatus": {
+          "text": "Change status",
+          "description": "getPossibleContractStatusTransitions lists possible status transitions.\n\nchangeContractStatus changes the status (e.g. from 'To prove' to 'Approved'), including custom status and notes for workflows.\ngetContractStatus()."
+        }
+      }
+    },
+    "masterdata": {
+      "label": "Retrieve master data",
+      "description": "Retrieve master data such as business types, contact persons, or vehicle groups.\n\ngetValidDATProcesses() for DVNs; getMaintenanceIntervals(); getAdditionalItems().",
+      "options": {
+        "master": {
+          "text": "Master data",
+          "description": "Access central master data to populate dropdowns or validate contact information."
+        }
+      }
+    },
+    "equipment": {
+      "label": "Vehicle equipment",
+      "description": "Determine the equipment actually installed on a vehicle as well as the equipment theoretically available for order, and retrieve the logical grouping of equipment items.",
+      "options": {
+        "check": {
+          "text": "Determine equipment",
+          "description": "Returns the standard and special equipment actually installed on a vehicle (getExistingEquipmentN()), a list of all special equipment theoretically available for that vehicle type — e.g. to populate a selection list in the UI (getPossibleEquipmentN()) —, the mapping of manufacturer codes to DAT equipment (getEquipmentFromManufacturerCodeN()), and the logical grouping/structuring of equipment items, e.g. \"Safety\", \"Comfort\", \"Infotainment\" (getEquipmentGroups()).\n\nNote: Factory special equipment and spare part details for repair calculation can be found under \"Spare parts & equipment\" (VehicleRepairService). The plain conversion of an equipment code into its plain-text description is covered under \"Equipment groups and classifying equipment\" (valueCode2Description())."
+        }
+      }
+    }
+  }
+}

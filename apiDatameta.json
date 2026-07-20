@@ -1,0 +1,871 @@
+{
+  "auth": {
+    "icon": "fa-key",
+    "options": {
+      "generateToken": {
+        "icon": "fa-shield-halved",
+        "service": "Authentication Service",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/Authentication?wsdl",
+        "func": "generateToken()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1294/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep",
+          "Mietwagenspiegel"
+        ],
+        "contextServiceOverrides": {
+          "myClaim": "MyClaimExternalAuthenticationService"
+        }
+      }
+    }
+  },
+  "vehicleSelection": {
+    "icon": "fa-search",
+    "options": {
+      "classicTree": {
+        "icon": "fa-sitemap",
+        "service": "VehicleSelectionService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleSelectionService?wsdl",
+        "func": "getVehicleTypes() / getManufacturers() / getBaseModelsN() / getSubModels() / getEngineOptions() / getCarBodyOptions() / getConstructionOptions() / getConstructionPeriodsN() / getGearingOptions() / getGrossVehicleWeightOptions() / getNumberOfAxleOptions() / getSuspensionOptions() / getTypeOfDriveOptions() / getWheelbaseOptions() / getEquipmentLineOptions() / getPriceFocusCases() / getPriceFocusConstructionYears() / getOptionsbyClassification() / getSubModelsByTextSearch() / compileDatECode()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1903/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "interactiveSelection": {
+        "icon": "fa-comments",
+        "service": "VehicleSelectionService (REST)",
+        "full_wsdl": "Keine WSDL (REST-Service)",
+        "func": "executeVehicleSelectionInteractive()",
+        "endpoint": "https://api.dat.de/vehicle-selection-interactive/v1",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/11424/10/11",
+        "productContext": null
+      },
+      "vehicleData": {
+        "icon": "fa-database",
+        "service": "VehicleSelectionService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleSelectionService?wsdl",
+        "func": "getVehicleData()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1987/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "classificationGroups": {
+        "icon": "fa-tags",
+        "service": "VehicleSelectionService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleSelectionService?wsdl",
+        "func": "getClassificationGroups()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/31539/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      }
+    }
+  },
+  "vehicleIdentification": {
+    "icon": "fa-fingerprint",
+    "options": {
+      "vin": {
+        "icon": "fa-barcode",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleIdentificationByVin()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1798/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "ecode": {
+        "icon": "fa-hashtag",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleIdentification()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1826/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "kba": {
+        "icon": "fa-id-card",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleIdentificationByKba()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1830/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "natcodeAustria": {
+        "icon": "fa-flag",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleIdentificationByNationalCodeAustria()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2001/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "codeSwitzerland": {
+        "icon": "fa-flag-checkered",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleIdentificationByCodeSwitzerland()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2005/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "licencePlate": {
+        "icon": "fa-car",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVinByLicencePlateFrance() / getVinByLicencePlateItaly() / getVinByLicencePlateNetherlands() / getVinByLicencePlateSpain()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/9149/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "equipmentLogic": {
+        "icon": "fa-cogs",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleTranslation()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2016/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "typecode": {
+        "icon": "fa-barcode",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVehicleIdentificationByTypecode()",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "supportedVinWmi": {
+        "icon": "fa-list-check",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getSupportedVinWmi()",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "vinByOcr": {
+        "icon": "fa-camera",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "getVinByOcr()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "orderMarkedVin": {
+        "icon": "fa-bookmark",
+        "service": "VehicleIdentificationService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleIdentificationService?wsdl",
+        "func": "orderMarkedVin()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      }
+    }
+  },
+  "conversionFunctions": {
+    "icon": "fa-exchange-alt",
+    "options": {
+      "dateConversion": {
+        "icon": "fa-calendar",
+        "service": "ConversionFunctionsService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/ConversionFunctionsService?wsdl",
+        "func": "constructionTime2Date() / date2ConstructionTime()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2033/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      },
+      "equipmentConversion": {
+        "icon": "fa-cog",
+        "service": "ConversionFunctionsService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/ConversionFunctionsService?wsdl",
+        "func": "getEquipmentGroups() / valueCode2Description()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2044/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "myClaim",
+          "VehicleRepairOnline",
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG",
+          "GlassRep"
+        ]
+      }
+    }
+  },
+  "vehicleImagery": {
+    "icon": "fa-camera",
+    "options": {
+      "vehicleImages": {
+        "icon": "fa-images",
+        "service": "VehicleImagery",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleImagery?wsdl",
+        "func": "getVehicleImagesN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/6805/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG"
+        ]
+      },
+      "rimImages": {
+        "icon": "fa-circle",
+        "service": "VehicleImagery",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/VehicleImagery?wsdl",
+        "func": "getVehicleRimImages()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/7523/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "DATECodeSelection",
+          "FinanceLine",
+          "valuateNG"
+        ]
+      }
+    }
+  },
+  "evaluate": {
+    "icon": "fa-file-invoice-dollar",
+    "options": {
+      "standardValuation": {
+        "icon": "fa-chart-line",
+        "service": "Evaluation / DossierN / ValuationServiceN",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/Evaluation?wsdl",
+        "func": "getVehicleEvaluation() / createDossierN() / createValuationN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2172/10/11",
+        "productContext": "FinanceLine",
+        "availableContexts": [
+          "FinanceLine",
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "myClaim": "https://www.datgroup.com/myClaim/soap/v2/ValuationServiceN?wsdl"
+        },
+        "contextFuncs": {
+          "FinanceLine": "getVehicleEvaluation()",
+          "myClaim": "createValuationN() / changeValuation(N)"
+        }
+      },
+      "targetDateValuation": {
+        "icon": "fa-calendar-day",
+        "service": "Evaluation / DossierN",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/Evaluation?wsdl",
+        "func": "getVehicleTargetDateEvaluationHistory() / createDossierN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2177/10/11",
+        "productContext": "FinanceLine",
+        "availableContexts": [
+          "FinanceLine",
+          "valuateNG"
+        ],
+        "contextWsdlOverrides": {
+          "valuateNG": "https://www.datgroup.com/valuateNG/soap/Dossier1N?wsdl"
+        },
+        "contextFuncs": {
+          "FinanceLine": "getVehicleTargetDateEvaluationHistory()",
+          "valuateNG": "createDossierN() / changeDossierN()"
+        }
+      },
+      "approximateValuation": {
+        "icon": "fa-magnifying-glass-chart",
+        "service": "Evaluation",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/Evaluation?wsdl",
+        "func": "getVehicleApproximateValue()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2174/10/11",
+        "productContext": "FinanceLine",
+        "availableContexts": [
+          "FinanceLine"
+        ],
+        "contextFuncs": {
+          "FinanceLine": "getVehicleApproximateValue()"
+        }
+      },
+      "residualValueForecast": {
+        "icon": "fa-arrow-trend-up",
+        "service": "Evaluation / DossierN / ValuationServiceN",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/Evaluation?wsdl",
+        "func": "getNewVehicleForecast() / getUsedVehicleForecast() / createDossierN() / createValuationN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2185/10/11",
+        "productContext": "FinanceLine",
+        "availableContexts": [
+          "FinanceLine"
+        ],
+        "contextFuncs": {
+          "FinanceLine": "getNewVehicleForecast() / getUsedVehicleForecast()"
+        }
+      },
+      "freeFileNumber": {
+        "icon": "fa-file-signature",
+        "service": "DossierN / ValuationServiceN",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/DossierN?wsdl",
+        "func": "createDossierN() / changeDossierN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/15305/10/11",
+        "productContext": "valuateNG",
+        "availableContexts": [
+          "valuateNG",
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "valuateNG": "https://www.datgroup.com/valuateNG/soap/Dossier1N?wsdl",
+          "myClaim": "https://www.datgroup.com/myClaim/soap/v2/ValuationServiceN?wsdl"
+        },
+        "contextFuncs": {
+          "valuateNG": "createDossierN() / changeDossierN()",
+          "myClaim": "createValuationN() / changeValuation(N)"
+        }
+      },
+      "rentalMirror": {
+        "icon": "fa-car-side",
+        "service": "RentalPricesService",
+        "full_wsdl": "https://www.datgroup.com/rentalPrices/soap/RentalPricesService?wsdl",
+        "func": "getRentalCarClassbyVIN() / getRentalOffersbyVIN() / getLossOfUseDatabyVIN() / exportRentalOffers()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/7685/10/11",
+        "productContext": "Mietwagenspiegel",
+        "availableContexts": [
+          "Mietwagenspiegel",
+          "valuateNG"
+        ],
+        "contextWsdlOverrides": {
+          "valuateNG": "https://www.datgroup.com/valuateNG/soap/RentalPricesService?wsdl"
+        },
+        "contextFuncs": {
+          "Mietwagenspiegel": "getRentalCarClassbyVIN() / getRentalCarClassbyDATECode() / getRentalOffersbyVIN() / getRentalOffersbyDATECode / getRentalOffersbyCarClass / getLossOfUseDatabyVIN() / getLossOfUseDatabyDATECode / exportRentalOffers()",
+          "valuateNG": "getRentalCarClassbyVIN() / getRentalCarClassbyDATECode() / getRentalOffersbyVIN() / getRentalOffersbyDATECode / getRentalOffersbyCarClass / getLossOfUseDatabyVIN() / getLossOfUseDatabyDATECode / exportRentalOffers()"
+        }
+      },
+      "processManagement": {
+        "icon": "fa-list-ul",
+        "service": "DossierN / ValuationServiceN",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/DossierN?wsdl",
+        "func": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/15305/10/11",
+        "productContext": "FinanceLine",
+        "availableContexts": [
+          "FinanceLine",
+          "valuateNG",
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "FinanceLine": "https://www.datgroup.com/FinanceLine/soap/DossierN?wsdl",
+          "valuateNG": "https://www.datgroup.com/valuateNG/soap/Dossier1N?wsdl",
+          "myClaim": "https://www.datgroup.com/myClaim/soap/v2/ValuationServiceN?wsdl"
+        },
+        "contextFuncs": {
+          "FinanceLine": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN()",
+          "valuateNG": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN()",
+          "myClaim": "createValuationN() / getValuationN() / changeValuationN() / deleteContract()(myClaimExternalService) / getPrintReport()(myClaimExternalService)"
+        }
+      },
+      "tradingProcess": {
+        "icon": "fa-handshake",
+        "service": "TradingServiceN",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/TradingServiceN?wsdl",
+        "func": "getVehicleGroupList() / setPurchaseOffer() / setSalesOffer() / changeContractStatus()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/12205/10/11",
+        "productContext": "myClaim",
+        "availableContexts": [
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "myClaim": "https://www.datgroup.com/myClaim/soap/v2/TradingServiceN?wsdl"
+        },
+        "contextFuncs": {
+          "myClaim": "getVehicleGroupList() / setPurchaseOffer() / setPurchaseData() / setAdmissionData() / setSalesOffer() / setSalesData() / changeContractStatus()(myClaimExternalService)"
+        }
+      },
+      "expertService": {
+        "icon": "fa-user-tie",
+        "service": "ExpertServiceN",
+        "full_wsdl": "https://www.datgroup.com/valuateNG/soap/ExpertServiceN?wsdl",
+        "func": "setValueDefinition() / setOrderOpeningDetails() / setConditionDetails() / setProductCheckDetailsList() / setLinkImageList()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/10939/10/11",
+        "productContext": "valuateNG",
+        "availableContexts": [
+          "valuateNG"
+        ],
+        "contextFuncs": {
+          "valuateNG": "setValueDefinition() / setOrderOpeningDetails() / setConditionDetails() / setProductCheckDetailsList() / setLinkImageList()"
+        }
+      },
+      "batchValuation": {
+        "icon": "fa-tasks",
+        "service": "BatchValuation",
+        "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/BatchValuation?wsdl",
+        "func": "startTask() / getTask() / getDocument() / cancelTask()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/14845/10/11",
+        "productContext": "FinanceLine",
+        "availableContexts": [
+          "FinanceLine",
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "FinanceLine": "https://www.datgroup.com/FinanceLine/soap/BatchValuation?wsdl",
+          "myClaim": "https://www.datgroup.com/myClaim/soap/BatchValuationService?wsdl"
+        },
+        "contextFuncs": {
+          "FinanceLine": "startTask() / getTask() / getDocument() / cancelTask()",
+          "myClaim": "startTaskN() / getTaskN() / getDocument() / cancelTaskN()"
+        }
+      },
+      "webScan": {
+        "icon": "fa-globe",
+        "service": "marketData (REST)",
+        "full_wsdl": "Keine WSDL (REST-Service)",
+        "func": "marketDataFromDossier() / marketDataFromVXS()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/16896/10/11",
+        "productContext": "myClaim",
+        "availableContexts": [
+          "myClaim",
+          "FinanceLine"
+        ],
+        "contextEndpoints": {
+          "myClaim": "https://www.datgroup.com/myClaim/rest/marketData/marketDataFromDossier",
+          "FinanceLine": "https://www.datgroup.com/FinanceLine/rest/v1/marketData/marketDataFromDossier"
+        },
+        "contextFuncs": {
+          "myClaim": "marketDataFromDossier() / marketDataFromVXS()",
+          "FinanceLine": "marketDataFromDossier() / marketDataFromVXS()"
+        }
+      },
+      "vehicleProperties": {
+        "icon": "fa-palette",
+        "service": "VehicleUserPropertiesService / ValuationVehiclePropertiesService",
+        "full_wsdl": "https://www.datgroup.com/valuateNG/soap/VehicleUserPropertiesService?wsdl",
+        "func": "setVehicleColorUpholstery() / getVehicleColorUpholstery()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2044/10/11",
+        "productContext": "valuateNG",
+        "availableContexts": [
+          "valuateNG",
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "valuateNG": "https://www.datgroup.com/valuateNG/soap/VehicleUserPropertiesService?wsdl",
+          "myClaim": "https://www.datgroup.com/myClaim/soap/ValuationVehiclePropertiesService?wsdl"
+        },
+        "contextFuncs": {
+          "valuateNG": "setVehicleColorUpholstery() / getVehicleColorUpholstery()",
+          "myClaim": "setVehicleColorUpholstery() / getVehicleColorUpholstery()"
+        }
+      },
+      "inMemoryValuation": {
+        "icon": "fa-bolt",
+        "service": "ValuationServiceN",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/ValuationServiceN?wsdl",
+        "func": "doValuationInMemoryN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/11055/10/11",
+        "productContext": "myClaim",
+        "availableContexts": [
+          "myClaim"
+        ],
+        "contextWsdlOverrides": {
+          "myClaim": "https://www.datgroup.com/myClaim/soap/v2/ValuationServiceN?wsdl"
+        },
+        "contextFuncs": {
+          "myClaim": "doValuationInMemoryN()"
+        }
+      }
+    }
+  },
+  "calculation": {
+    "icon": "fa-calculator",
+    "options": {
+      "newCalc": {
+        "icon": "fa-plus",
+        "service": "VehicleRepairService / MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/VehicleRepairOnline/services/VehicleRepairService?wsdl",
+        "func": "calculateN() / importDossier()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2640/10/11",
+        "productContext": "VehicleRepairOnline",
+        "availableContexts": [
+          "VehicleRepairOnline",
+          "myClaim",
+          "MyClaimExternal"
+        ],
+        "contextServiceOverrides": {
+          "VehicleRepairOnline": "VehicleRepairService",
+          "myClaim": "VehicleRepairService",
+          "MyClaimExternal": "MyClaimExternalService"
+        }
+      },
+      "contractCalc": {
+        "icon": "fa-edit",
+        "service": "VehicleRepairService",
+        "full_wsdl": "https://www.datgroup.com/VehicleRepairOnline/services/VehicleRepairService?wsdl",
+        "func": "calculateContract()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2640/10/11",
+        "productContext": "VehicleRepairOnline",
+        "availableContexts": [
+          "VehicleRepairOnline",
+          "myClaim",
+          "MyClaimExternal"
+        ],
+        "contextServiceOverrides": {
+          "VehicleRepairOnline": "VehicleRepairService",
+          "myClaim": "VehicleRepairService",
+          "MyClaimExternal": "MyClaimExternalService"
+        }
+      },
+      "resultsRetrieve": {
+        "icon": "fa-download",
+        "service": "VehicleRepairService / MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/VehicleRepairService?wsdl",
+        "func": "getCalculationResultN() / getContract() / getContractList()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2640/10/11",
+        "productContext": "myClaim",
+        "availableContexts": [
+          "VehicleRepairOnline",
+          "myClaim",
+          "MyClaimExternal"
+        ],
+        "contextServiceOverrides": {
+          "VehicleRepairOnline": "VehicleRepairService",
+          "myClaim": "VehicleRepairService",
+          "MyClaimExternal": "MyClaimExternalService"
+        }
+      },
+      "exportDoc": {
+        "icon": "fa-file-pdf",
+        "service": "VehicleRepairService / MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "exportDossierToDocument()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2640/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "VehicleRepairOnline",
+          "myClaim",
+          "MyClaimExternal"
+        ],
+        "contextServiceOverrides": {
+          "VehicleRepairOnline": "VehicleRepairService",
+          "myClaim": "VehicleRepairService",
+          "MyClaimExternal": "MyClaimExternalService"
+        }
+      },
+      "manageContract": {
+        "icon": "fa-list-ul",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "createOrUpdateContractN() / getContractStatus() / listContracts()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/15005_1/10/11",
+        "productContext": "myClaim",
+        "availableContexts": [
+          "myClaim",
+          "MyClaimExternal"
+        ],
+        "contextServiceOverrides": {
+          "myClaim": "MyClaimExternalService",
+          "MyClaimExternal": "MyClaimExternalService"
+        }
+      },
+      "partsDetails": {
+        "icon": "fa-cogs",
+        "service": "VehicleRepairService",
+        "full_wsdl": "https://www.datgroup.com/VehicleRepairOnline/services/VehicleRepairService?wsdl",
+        "func": "getSparePartsDetails() / getSparePartsDetailsByVIN() / getSparePartsDetailsForDPN() / getSparePartsDetailsForDPNByVIN() / getFillingQuantities()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/32459/10/11",
+        "productContext": "VehicleRepairOnline",
+        "availableContexts": [
+          "VehicleRepairOnline",
+          "myClaim"
+        ],
+        "contextServiceOverrides": {
+          "VehicleRepairOnline": "VehicleRepairService",
+          "myClaim": "VehicleRepairService"
+        }
+      },
+      "manualPositions": {
+        "icon": "fa-hand-paper",
+        "service": "VehicleRepairService",
+        "full_wsdl": "https://www.datgroup.com/VehicleRepairOnline/services/VehicleRepairService?wsdl",
+        "func": "importManualPositions() / exportManualPositions() / deleteAllManualPositions()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2413/10/11",
+        "productContext": "VehicleRepairOnline",
+        "availableContexts": [
+          "VehicleRepairOnline",
+          "myClaim"
+        ],
+        "contextServiceOverrides": {
+          "VehicleRepairOnline": "VehicleRepairService",
+          "myClaim": "VehicleRepairService"
+        }
+      }
+    }
+  },
+  "myclaim": {
+    "icon": "fa-users",
+    "options": {
+      "findContract": {
+        "icon": "fa-search",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "findContract()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1473/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "getContract": {
+        "icon": "fa-file-alt",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "getContract()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/1471/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "listContracts": {
+        "icon": "fa-list-ul",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "listContracts()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2593/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "createOrUpdateContractN": {
+        "icon": "fa-plus-circle",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "createOrUpdateContractN()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/16529/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "deleteContract": {
+        "icon": "fa-trash",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "deleteContract()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/22543/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "listTemplates": {
+        "icon": "fa-file-template",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "listTemplates()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2595/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "manageInvoiceRates": {
+        "icon": "fa-percentage",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "listInvoiceRates(), assignInvoiceRateToContract()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2613/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "manageAttachments": {
+        "icon": "fa-paperclip",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "listAttachmentsOfContract(), uploadAttachmentByFolderID(), getPrintReport()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2591/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "importCalculation": {
+        "icon": "fa-upload",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "importCalculationSummaryByType()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/7500/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "managePartners": {
+        "icon": "fa-user-plus",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "assignPartnerByCustomerNumber(), unAssignPartnerFromContract()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2585/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "manageMessages": {
+        "icon": "fa-comments",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "addMessage(), listContractHistory()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2725/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      },
+      "changeStatus": {
+        "icon": "fa-exchange-alt",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "getPossibleContractStatusTransitions(), changeContractStatus()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/14941/10/11",
+        "productContext": "MyClaimExternal",
+        "availableContexts": [
+          "MyClaimExternal"
+        ]
+      }
+    }
+  },
+  "masterdata": {
+    "icon": "fa-database",
+    "options": {
+      "master": {
+        "icon": "fa-address-book",
+        "service": "MyClaimExternalService",
+        "full_wsdl": "https://www.datgroup.com/myClaim/soap/v2/MyClaimExternalService?wsdl",
+        "func": "getPossibleContactPersons()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/12216/10/11",
+        "productContext": "myClaim",
+        "availableContexts": [
+          "myClaim"
+        ]
+      }
+    }
+  },
+  "equipment": {
+    "icon": "fa-car-side",
+    "options": {
+      "check": {
+        "icon": "fa-check-double",
+        "service": "ConversionFunctionsService",
+        "full_wsdl": "https://www.datgroup.com/DATECodeSelection/services/ConversionFunctionsService?wsdl",
+        "func": "getExistingEquipmentN() / getPossibleEquipmentN() / getEquipmentFromManufacturerCodeN() / getEquipmentGroups()",
+        "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2044/10/11",
+        "productContext": "DATECodeSelection",
+        "availableContexts": [
+          "DATECodeSelection"
+        ]
+      }
+    }
+  }
+}

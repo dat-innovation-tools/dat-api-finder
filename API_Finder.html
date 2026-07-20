@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAT API Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="wizard">
+    <div class="wizard-header">
+        <div class="wizard-header-text">
+            <h2 id="pageTitle" class="page-title-link" role="button" tabindex="0" title="Zurück zum Start">DAT API Finder</h2>
+            <p id="pageSubtitle">Finden Sie schnell und einfach die richtige API für Ihren Anwendungsfall.</p>
+        </div>
+        <div id="langToggle" class="lang-toggle" role="group" aria-label="Sprache / Language">
+            <span class="lang-toggle-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+            <button type="button" class="lang-btn active" data-lang="de" aria-pressed="true">DE</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+    </div>
+
+    <div class="search-wrapper">
+        <label for="apiSearch" id="searchLabel" class="search-label"><i class="fas fa-search"></i> Direktsuche</label>
+        <input type="search" id="apiSearch" placeholder="Funktion, Service oder Stichwort …" autocomplete="off" aria-describedby="searchHint">
+        <p id="searchHint" class="search-hint">z.&nbsp;B. „VIN“, „calculateN“, „Token“ oder „myClaim“</p>
+        <div id="searchResults" class="search-results" hidden></div>
+    </div>
+
+    <nav class="progress-stepper" aria-label="Fortschritt">
+        <div class="progress-step active" data-step="0"><span class="step-num">1</span><span class="step-label">Kategorie</span></div>
+        <div class="progress-step" data-step="1"><span class="step-num">2</span><span class="step-label">Funktion</span></div>
+        <div class="progress-step" data-step="2"><span class="step-num">3</span><span class="step-label">Ergebnis</span></div>
+    </nav>
+    
+    <div class="step active" id="step1">
+        <h3 id="step1Title">Schritt 1: Wählen Sie Ihren Bereich</h3>
+        <div id="step1BackBar" class="step1-back-bar" hidden>
+            <button type="button" id="step1BackBtn" class="step1-back-btn"><i class="fas fa-arrow-left"></i> Alle Bereiche</button>
+        </div>
+        <div id="useCaseContainer" class="options-container options-container--groups"></div>
+        <div id="descriptionContainer" class="description-box is-hidden"></div>
+    </div>
+    
+    <div class="step" id="step2">
+        <h3 id="step2Title">Schritt 2: Wählen Sie die gewünschte Funktion</h3>
+        <div id="detailedOptionsContainer" class="options-container"></div>
+        <div id="descriptionDetailContainer" class="description-box is-hidden"></div>
+    </div>
+    
+    <div class="step" id="stepResult">
+        <h3 id="stepResultTitle">Ihr Ergebnis</h3>
+        <div id="result"></div>
+    </div>
+    
+    <p id="navHint" class="nav-hint" aria-live="polite"></p>
+    <div class="navigation">
+        <button id="backBtn" disabled>Zurück</button>
+        <button id="nextBtn" disabled>Weiter</button>
+        <button id="copyBtn" style="display: none;">Ergebnis kopieren</button>
+    </div>
+
+    <footer class="wizard-footer">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span id="footerSupportLabel">Schnittstellen-Support:</span>
+        <a href="mailto:interfaces@dat.eu">interfaces@dat.eu</a>
+    </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
