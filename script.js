@@ -536,7 +536,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                                             <code class="wsdl-code">${result.endpoint}</code>
                                             <div class="wsdl-actions">
                                                 <button type="button" class="copy-field-btn" data-copy="${result.endpoint}"><i class="fas fa-copy"></i> ${ui.copy}</button>
-                                                <a href="${result.endpoint}" target="_blank" class="wsdl-open-btn"><i class="fas fa-arrow-up-right-from-square"></i> ${ui.open || 'Öffnen'}</a>
                                             </div>
                                         </div>
                                     </td>
@@ -586,7 +585,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         };
 
         const rest = isRestResult(result);
-        const openLabel = rest ? (ui.open || 'Öffnen') : ui.openWsdl;
+        const openLabel = ui.openWsdl;
         const wsdlColHead = rest ? (ui.tableEndpoint || 'Endpunkt') : 'WSDL';
 
         // Default to SilverDAT 3 PRO (myClaim) when this function offers it — most
@@ -617,7 +616,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <code class="wsdl-code">${url}</code>
                             <div class="wsdl-actions">
                                 <button type="button" class="copy-field-btn" data-copy="${url}"><i class="fas fa-copy"></i> ${ui.copy}</button>
-                                <a href="${url}" target="_blank" class="wsdl-open-btn"><i class="fas fa-arrow-up-right-from-square"></i> ${openLabel}</a>
+                                ${rest ? '' : `<a href="${url}" target="_blank" class="wsdl-open-btn"><i class="fas fa-arrow-up-right-from-square"></i> ${openLabel}</a>`}
                             </div>
                             ${variantHint}
                         </div>
