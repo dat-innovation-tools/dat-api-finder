@@ -658,7 +658,8 @@ button#nextBtn:disabled::before {
     font-weight: 400;
     min-height: 80px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: flex-start;
     transition: all 0.4s ease;
     white-space: pre-line;
@@ -680,6 +681,29 @@ button#nextBtn:disabled::before {
 
 @keyframes fadeInUp {
     to { opacity: 1; transform: translateY(0); }
+}
+
+.option-tip {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: 14px 16px;
+    background: rgba(255, 209, 0, 0.1);
+    border-left: 4px solid #FFD100;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #4a5568;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    white-space: pre-line;
+}
+
+.option-tip i {
+    color: #10366C;
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-size: 1rem;
 }
 
 .navigation {

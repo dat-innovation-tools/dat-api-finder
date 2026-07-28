@@ -97,7 +97,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                 merged[catKey].options[optKey] = {
                     ...optMeta,
                     text: optText.text || optKey,
-                    description: optText.description || ''
+                    description: optText.description || '',
+                    hint: optText.hint || ''
                 };
             }
         }
@@ -216,12 +217,17 @@ document.addEventListener('DOMContentLoaded', async function () {
         return cut.slice(0, lastSpace > 80 ? lastSpace : maxLength) + '…';
     }
 
-    function renderDescription(container, text, placeholder) {
+    function renderTip(hint) {
+        if (!hint) return '';
+        return `<div class="option-tip"><i class="fas fa-lightbulb" aria-hidden="true"></i><div>${hint}</div></div>`;
+    }
+
+    function renderDescription(container, text, placeholder, hint) {
         if (!text) {
             container.innerHTML = `<span style="color: #a0aec0;">${placeholder}</span>`;
             return;
         }
-        container.innerHTML = `<div class="description-content">${text}</div>`;
+        container.innerHTML = `<div class="description-content">${text}</div>${renderTip(hint)}`;
     }
 
     // After picking a tile, the description and the Next button often sit below the
@@ -408,7 +414,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (catOption) catOption.classList.add('selected');
         if (detailOption) detailOption.classList.add('selected');
         renderDescription(descriptionContainer, apiData[useCaseKey].description, '');
-        renderDescription(descriptionDetailContainer, apiData[useCaseKey].options[detailKey].description, '');
+        renderDescription(descriptionDetailContainer, apiData[useCaseKey].options[detailKey].description, '', apiData[useCaseKey].options[detailKey].hint);
         showResult();
         currentStep = 2;
         updateWizard();
@@ -496,7 +502,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     selectedDetail = key;
                     document.querySelectorAll('#detailedOptionsContainer .icon-option').forEach(opt => opt.classList.remove('selected'));
                     option.classList.add('selected');
-                    renderDescription(descriptionDetailContainer, optionData.description, '');
+                    renderDescription(descriptionDetailContainer, optionData.description, '', optionData.hint);
                     updateWizard();
                     revealSelectionFeedback(descriptionDetailContainer);
                 });
@@ -552,6 +558,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                         ${result.text}
                     </div>
                     <div class="result-description">${result.description}</div>
+                    ${renderTip(result.hint)}
                     ${funcChips ? `
                         <div class="result-funcs-shared">
                             <div class="result-funcs-label">${ui.labelRelevantFuncs || (ui.tableFunction || 'API-Funktion(en)')}</div>
@@ -650,6 +657,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     ${result.text}
                 </div>
                 <div class="result-description">${result.description}</div>
+                ${renderTip(result.hint)}
                 ${sharedFuncsHtml}
 
                 <div class="result-wsdl-table-wrap">

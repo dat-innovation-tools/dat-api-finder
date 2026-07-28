@@ -156,7 +156,8 @@
       "options": {
         "vin": {
           "text": "By VIN",
-          "description": "Unique identification via the 17-digit vehicle identification number (VIN).\n\nReturns DAT €uropa-Code®, standard and special equipment, color and upholstery information, and more.\nThere are two procedures: VIN-Query and VIN-Basic as a fallback when manufacturer data retrieval/processing fails; IdentificationSource indicates the procedure used; VinAccuracy provides information on match accuracy; VINResult contains the data from the data card.\nFree test stubs with vehicle data are available for error stubs with fault scenarios; reimport vehicles are flagged where the manufacturer provides destination country information."
+          "description": "Unique identification via the 17-digit vehicle identification number (VIN).\n\nReturns DAT €uropa-Code®, standard and special equipment, color and upholstery information, and more.\nThere are two procedures: VIN-Query and VIN-Basic as a fallback when manufacturer data retrieval/processing fails; IdentificationSource indicates the procedure used; VinAccuracy provides information on match accuracy; VINResult contains the data from the data card.\nFree test stubs with vehicle data are available for error stubs with fault scenarios; reimport vehicles are flagged where the manufacturer provides destination country information.",
+          "hint": "Special equipment returned by the VIN query still has to be provided separately when creating a valuation or calculation (new case) – it is not carried over automatically from the VIN result, just like DAT €uropa-Code, container/construction time, etc."
         },
         "ecode": {
           "text": "By DAT €uropa-Code®",
@@ -234,7 +235,8 @@
       "options": {
         "standardValuation": {
           "text": "Standard valuation",
-          "description": "Valuation of a vehicle at the current point in time based on age, mileage, equipment, and condition.\n\nOutputs sales price, trade margin, and purchase price.\nFor vehicles up to 20 years old."
+          "description": "Valuation of a vehicle at the current point in time based on age, mileage, equipment, and condition.\n\nOutputs sales price, trade margin, and purchase price.\nFor vehicles up to 20 years old.",
+          "hint": "Also considered if provided: owner/previous owner information (numberOfOwners) and tax treatment under § 25a UStG (vatType: regular/margin scheme taxation)."
         },
         "targetDateValuation": {
           "text": "Reference date valuation",
@@ -258,7 +260,8 @@
         },
         "processManagement": {
           "text": "Case management",
-          "description": "Create, modify, search, delete, and export valuation cases (dossiers/valuations).\n\nIncludes reset to DAT standards and value factors.\n\nNote: The value-influencing factors (setValueInfluencingFactors / getValueInfluencingFactors) are not available in valuateFinance."
+          "description": "Create, modify, search, delete, and export valuation cases (dossiers/valuations).\n\nIncludes reset to DAT standards and value factors.\n\nNote: The value-influencing factors (setValueInfluencingFactors / getValueInfluencingFactors) are not available in valuateFinance.",
+          "hint": "For electric vehicles, getBatteryValuationParams checks whether an extended valuation (battery condition) is possible."
         },
         "tradingProcess": {
           "text": "Sales process",
@@ -346,7 +349,7 @@
         },
         "listTemplates": {
           "text": "Retrieve templates",
-          "description": "The listTemplates function retrieves all work templates (templates) of a network, important when multiple templates exist to transfer data into the desired template.\n\nSupports types such as vro_calculation for damage calculations.\ngetTemplates()."
+          "description": "The listTemplates function retrieves all work templates (templates) of a network, important when multiple templates exist to transfer data into the desired template.\n\nSupports types such as vro_calculation for damage calculations, as well as valuation cases (contractType bundle_valuation, e.g. SilverDAT 3 PRO).\ngetTemplates()."
         },
         "manageInvoiceRates": {
           "text": "Manage billing rates",

@@ -449,7 +449,7 @@
         "icon": "fa-list-ul",
         "service": "DossierN / ValuationServiceN",
         "full_wsdl": "https://www.datgroup.com/FinanceLine/soap/DossierN?wsdl",
-        "func": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN()",
+        "func": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN() / getBatteryValuationParams()",
         "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/15305/10/11",
         "productContext": "FinanceLine",
         "availableContexts": [
@@ -463,9 +463,9 @@
           "myClaim": "https://www.datgroup.com/myClaim/soap/v2/ValuationServiceN?wsdl"
         },
         "contextFuncs": {
-          "FinanceLine": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN()",
-          "valuateNG": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN()",
-          "myClaim": "createValuationN() / getValuationN() / changeValuationN() / deleteContract()(myClaimExternalService) / getPrintReport()(myClaimExternalService)"
+          "FinanceLine": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN() / getBatteryValuationParams()",
+          "valuateNG": "createDossierN() / getDossierN() / changeDossierN() / searchDossierListN() / deleteDossierN() / exportDossierN() / getBatteryValuationParams()",
+          "myClaim": "createValuationN() / getValuationN() / changeValuationN() / deleteContract()(myClaimExternalService) / getPrintReport()(myClaimExternalService) / getBatteryValuationParams()"
         }
       },
       "tradingProcess": {
@@ -769,7 +769,8 @@
         "kompendium_link": "https://www.dat.de/fileadmin/de/support/interface-documentation/MG/SilverDAT_Schnittstellen-Kompendium_Mag/#/home/2595/10/11",
         "productContext": "MyClaimExternal",
         "availableContexts": [
-          "MyClaimExternal"
+          "MyClaimExternal",
+          "myClaim"
         ]
       },
       "manageInvoiceRates": {

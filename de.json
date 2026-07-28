@@ -156,7 +156,8 @@
       "options": {
         "vin": {
           "text": "Per VIN",
-          "description": "Eindeutige Identifikation über die 17-stellige Fahrzeug-Identifizierungsnummer (FIN/VIN).\n\nLiefert DAT €uropa-Code®, Serien- und Sonderausstattungen, Informationen über Farben und Polster und mehr.\nEs gibt zwei Verfahren: VIN-Query und VIN-Basic als Fallback bei Problemen mit Abruf/Verarbeitung der Hersteller Daten; IdentificationSource kennzeichnet das verwendete Verfahren; VinAccuracy liefert Information über die Genauigkeit des Treffers; VINResult enthält die Daten aus der Datenkarte.\n Es sind kostenlose Test-Stubs mit Fahrzeugdaten für Error-Stubs mit Fehlersituationen vorhanden; Reimport-Fahrzeuge werden gekennzeichnet, sofern der Hersteller Informationen zum Bestimmungsland liefert."
+          "description": "Eindeutige Identifikation über die 17-stellige Fahrzeug-Identifizierungsnummer (FIN/VIN).\n\nLiefert DAT €uropa-Code®, Serien- und Sonderausstattungen, Informationen über Farben und Polster und mehr.\nEs gibt zwei Verfahren: VIN-Query und VIN-Basic als Fallback bei Problemen mit Abruf/Verarbeitung der Hersteller Daten; IdentificationSource kennzeichnet das verwendete Verfahren; VinAccuracy liefert Information über die Genauigkeit des Treffers; VINResult enthält die Daten aus der Datenkarte.\n Es sind kostenlose Test-Stubs mit Fahrzeugdaten für Error-Stubs mit Fehlersituationen vorhanden; Reimport-Fahrzeuge werden gekennzeichnet, sofern der Hersteller Informationen zum Bestimmungsland liefert.",
+          "hint": "Die von der VIN-Abfrage gelieferte Sonderausstattung muss bei Bewertung und Kalkulation (Neuanlage eines Vorgangs) trotzdem zusätzlich mitgegeben werden – sie wird nicht automatisch aus dem VIN-Ergebnis übernommen, ebenso wie DAT €uropa-Code, Container/Bauzeit usw."
         },
         "ecode": {
           "text": "Per DAT €uropa-Code®",
@@ -234,7 +235,8 @@
       "options": {
         "standardValuation": {
           "text": "Standardbewertung",
-          "description": "Bewertung eines Fahrzeugs zum aktuellen Zeitpunkt basierend auf Alter, Kilometerstand, Ausstattung und Zustand.\n\nAusgabe von Verkaufspreis, Handelsspanne und Einkaufspreis.\nFür Fahrzeuge bis 20 Jahre alt."
+          "description": "Bewertung eines Fahrzeugs zum aktuellen Zeitpunkt basierend auf Alter, Kilometerstand, Ausstattung und Zustand.\n\nAusgabe von Verkaufspreis, Handelsspanne und Einkaufspreis.\nFür Fahrzeuge bis 20 Jahre alt.",
+          "hint": "Zusätzlich berücksichtigbar: Angaben zu Halter/Vorbesitzer (numberOfOwners) sowie Besteuerungsart nach § 25a UStG (vatType: Regelbesteuert/Differenzbesteuert)."
         },
         "targetDateValuation": {
           "text": "Stichtagsbewertung",
@@ -258,7 +260,8 @@
         },
         "processManagement": {
           "text": "Vorgangsverwaltung",
-          "description": "Anlegen, Ändern, Suchen, Löschen und Exportieren von Bewertungsvorgängen (Dossiers/Valuations).\n\nInklusive Reset auf DAT-Standards und Wertfaktoren.\n\nHinweis: Die wertbeeinflussenden Faktoren (setValueInfluencingFactors / getValueInfluencingFactors) stehen in valuateFinance nicht zur Verfügung."
+          "description": "Anlegen, Ändern, Suchen, Löschen und Exportieren von Bewertungsvorgängen (Dossiers/Valuations).\n\nInklusive Reset auf DAT-Standards und Wertfaktoren.\n\nHinweis: Die wertbeeinflussenden Faktoren (setValueInfluencingFactors / getValueInfluencingFactors) stehen in valuateFinance nicht zur Verfügung.",
+          "hint": "Für Elektrofahrzeuge prüft getBatteryValuationParams, ob eine erweiterte Bewertung (Batteriezustand) möglich ist."
         },
         "tradingProcess": {
           "text": "Verkaufsprozess",
@@ -346,7 +349,7 @@
         },
         "listTemplates": {
           "text": "Templates abrufen",
-          "description": "Die Funktion listTemplates ruft alle Arbeitsvorlagen (Templates) eines Netzes ab, wichtig bei mehreren Vorlagen, um Daten gezielt in die gewünschte Vorlage zu übertragen.\n\nUnterstützt Typen wie vro_calculation für Schadenskalkulationen.\ngetTemplates()."
+          "description": "Die Funktion listTemplates ruft alle Arbeitsvorlagen (Templates) eines Netzes ab, wichtig bei mehreren Vorlagen, um Daten gezielt in die gewünschte Vorlage zu übertragen.\n\nUnterstützt Typen wie vro_calculation für Schadenskalkulationen sowie Bewertungsvorgänge (contractType bundle_valuation, z.B. SilverDAT 3 PRO).\ngetTemplates()."
         },
         "manageInvoiceRates": {
           "text": "Verrechnungssätze verwalten",
